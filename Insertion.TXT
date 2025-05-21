@@ -1,0 +1,449 @@
+insert into medicine
+values(12,"Panadol",223,'2022-03-12','2024-08-12',"Tablet"),
+(1,"Desprine",15,'2021-02-20','2024-03-23',"Tablet"),
+(2,"Regixx",200,'2018-03-01','2019-08-15',"Seroup"),
+(3,"Ganaton",500,'2023-03-10','2024-05-14',"Tablet"),
+(4,"Raltus",98,'2019-05-03','2020-12-03',"Seroup"),
+(5,"Selanz",675,'2021-06-30','2024-08-23',"Tablet"),
+(6,"Tenormin",55,'2022-03-16','2026-10-18',"Tablet"),
+(7,"Narobian",50,'2007-03-12','2024-02-01',"Injection"),
+(8,"Sinjobian",100,'2022-12-09','2025-06-16',"Capsool"),
+(9,"Glakofag",315,'2022-09-25','2021-08-10',"Tablet"),
+(10,"Nuberol",20,'2022-11-28','2023-08-23',"Tablet"),
+(11,"Calpol",25,'2022-07-12','2024-02-14',"Tablet");
+select * from medicine;
+
+insert into accountant
+values(1,"Ali",3110493297595,15000,19),
+(2,"Ahmad",3610493296956,34000,56),
+(3,"Raza",3010493297595,25000,45),
+(4,"Mohid",3100493274740,19000,35),
+(5,"Fakhr",3110493264490,55000,39),
+(6,"Hassan",3110473808795,76000,37),
+(7,"Hussain",3546793279795,98000,47),
+(8,"Arshad",3220493296658,45000,21),
+(9,"Abu Bakar",3550493297595,23000,27),
+(10,"Allah Ditta",3110493238935,51000,42),
+(11,"Azhar",3110493294673,150000,42);
+select * from accountant;
+
+insert into accountant_phone
+values(1,03462695244),
+(1,03062695243),
+(2,03164564777),
+(3,03375675656),
+(4,03446457508),
+(5,03176576986),
+(6,03075063342),
+(4,03006756777),
+(8,03004845482),
+(9,03096575677),
+(10,03466756837),
+(11,03086768588),
+(8,034577388837),
+(7,034464579877),
+(3,03462695243);
+select * from accountant_phone;
+
+insert into accountant_email
+values(1,"ghummanabubakar@gmail.com"),
+(2,"aliraza@gmail.com"),
+(3,"ghummanabuzar@gmail.com"),
+(4,"arshadali@gmail.com"),
+(5,"rahansarwar@gmail.com"),
+(6,"abdulquddoss@gmail.com"),
+(7,"alihassan@gmail.com"),
+(8,"fakhrshahzad@gmail.com"),
+(8,"mohisahmad@gmail.com"),
+(9,"ahmadbilal@gmail.com"),
+(2,"shakeel@gmail.com");
+select * from accountant_email;
+
+insert into accountant_address
+values(1,"12E","Bahria Town","Lahore","Pakistan"),
+(2,"12s","Defence","Lahore","Pakistan"),
+(3,"12E","PakistanCity","Haroonabad","Pakistan"),
+(4,"12E","BahriaTown","Karachi","Pakistan"),
+(5,"13E3","AlbertTown","Barmingum","England"),
+(6,"13","AnmolCity","Chistian","Pakistan"),
+(7,"13Paradise","SuperTown","Lahore","Pakistan"),
+(8,"09","GreenTown","Bahawalnagar","Pakistan"),
+(9,"54C","BahriaTown","Lahore","Pakistan"),
+(10,"158F","ShahKhawarTown","Lahore","Pakistan"),
+(11,"02E","RiazAvenue","Islamabad","Pakistan");
+select * from accountant_address;
+
+insert into receiptnist
+values(1,"Ali",3110452758942,50000,47),
+(2,"Waqas",3110493297595,25000,51),
+(4,"Abdullah",3110493253795,15000,35),
+(6,"Rizwan",3110423759435,39000,29),
+(3,"Saud",3220393297595,52000,42),
+(7,"Faisal",3567493297595,86000,27),
+(10,"Danish",3110426390595,76000,36),
+(5,"Umar",3110493638938,63000,25),
+(11,"Frooq",3635229329759,50000,56),
+(8,"Abrar",3910493377595,23000,39),
+(9,"Umair",3110329557595,69000,45);
+select* from receiptnist;
+
+insert into receiptnist_phone
+values(10,03462695242),
+(1,03062695243),
+(1,03164564777),
+(3,03375675656),
+(4,03446457508),
+(5,03176576986),
+(6,03075063342),
+(4,03006756777),
+(8,03004845482),
+(9,03096575677),
+(2,03466756837),
+(11,03086768588),
+(8,034577388837),
+(7,034464579877),
+(3,03462695243);
+select * from receiptnist_phone;
+
+insert into receiptnist_email
+values(1,"umarfarooq@gmail.com"),
+(4,"saudahmad@gmail.com"),
+(7,"ahmadraza@gmail.com"),
+(2,"alihassan@gmail.com"),
+(1,"akhtar@gmail.com"),
+(1,"safdar@gmail.com"),
+(3,"akmal@gmail.com"),
+(8,"rizwan@gmail.com"),
+(1,"danishali@gmail.com"),
+(5,"jasimmujahid@gmail.com"),
+(10,"umarakram@gmail.com"),
+(11,"faisalfarzand@gmail.com"),
+(6,"ikramhussain@gmail.com"),
+(9,"manzoor@gmail.com");
+select * from receiptnist_email;
+
+insert into receiptnist_address
+values(1,"12E","Bahria Town","Lahore","Pakistan"),
+(2,"12s","Defence","Lahore","Pakistan"),
+(6,"12E","PakistanCity","Haroonabad","Pakistan"),
+(3,"12E","Bahria Town","Karachi","Pakistan"),
+(4,"13E3","AlbertTown","Barmingum","England"),
+(8,"13","AnmolCity","Chistian","Pakistan"),
+(7,"13Paradise","SuperTown","Lahore","Pakistan"),
+(5,"09","GreenTown","Bahawalnagar","Pakistan"),
+(9,"54C","Bahria Town","Lahore","Pakistan"),
+(11,"158F","ShahKhawarTown","Lahore","Pakistan"),
+(10,"02E","RiazAvenue","Islamabad","Pakistan");
+select * from receiptnist_address;
+
+insert into ward
+values(1,24,"A building,1st Floor"),
+(2,12,"B building,Ground Floor"),
+(3,06,"C building,3rd Floor"),
+(4,10,"A building,1st Floor"),
+(5,15,"C building,5th Floor"),
+(6,21,"A building,2nd Floor"),
+(7,09,"E building,6th Floor"),
+(8,18,"B building,1st Floor"),
+(9,24,"A building,2nd Floor"),
+(10,05,"C building,1st Floor"),
+(11,09,"Main building,3rd Floor");
+select * from ward;
+
+insert into bed
+values(1,"Operation",'2002-12-13',1),
+(5,"Rest",'2021-02-28',8),
+(6,"Patient",'2008-03-10',11),
+(2,"Operation",'2018-04-29',5),
+(3,"Paient",'2013-05-14',1),
+(4,"Rest",'2004-12-03',4),
+(7,"Patient",'2010-11-13',2),
+(8,"Patient",'2016-07-27',10),
+(9,"Operation",'2020-08-03',8),
+(10,"Operation",'2015-01-19',3),
+(11,"Patient",'2019-12-13',1);
+select * from bed;
+
+insert into nurse
+values(1,"Nasreen",3530465789234,25000,26,1),
+(2,"Firza",3290465675666,22000,24,4),
+(3,"Maryam",6475746645774,25000,36,3),
+(4,"Sidra",3536754756567,15000,32,6),
+(5,"Ruksana",3104656656564,35000,29,4),
+(6,"Mhnoor",3662367565046,27000,34,11),
+(7,"Sajal",3484968989234,32000,39,10),
+(8,"Fatima",3844576876786,50000,41,9),
+(9,"Nakhla",3530598957987,16000,30,6),
+(10,"Maheen",3193856467957,19000,37,4),
+(11,"Aqsa",3530438027654,33000,40,7),
+(12,"Nabeela",3532047027654,39000,42,3);
+select * from nurse;
+
+insert into nurse_phone
+values(10,03462636844),
+(1,03036803329),
+(1,03146645784),
+(3,03673865686),
+(4,03274674545),
+(5,03268658456),
+(6,03097385745),
+(4,03003577844),
+(8,03018487357),
+(9,03235846866),
+(2,03457894364),
+(11,03089759767),
+(8,034375649665),
+(7,034935746505),
+(3,03462695534);
+select * from nurse_phone;
+
+insert into nurse_email
+values(1,"nasreen@gmail.com"),
+(4,"sajal@gmail.com"),
+(7,"mahnoor@gmail.com"),
+(2,"aqsa@gmail.com"),
+(12,"nabeela@gmail.com"),
+(1,"nadia@gmail.com"),
+(3,"razia@gmail.com"),
+(8,"asma@gmail.com"),
+(1,"maheen@gmail.com"),
+(5,"amina@gmail.com"),
+(10,"aman@gmail.com"),
+(11,"foozia@gmail.com"),
+(6,"sidra@gmail.com"),
+(9,"firza@gmail.com");
+select * from nurse_email;
+
+insert into nurse_address
+values(1,"12E","Bahria Town","Lahore","Pakistan"),
+(2,"12s","Defence","Mianwali","Pakistan"),
+(4,"12E","PakistanCity","Haroonabad","Pakistan"),
+(11,"12E","Bahria Town","Karachi","Pakistan"),
+(5,"13E3","AlbertTown","Faisalabad","Pakistan"),
+(9,"13","AnmolCity","Chistian","Pakistan"),
+(3,"13Paradise","SuperTown","Lahore","Pakistan"),
+(7,"09","GreenTown","Bahawalnagar","Pakistan"),
+(10,"54C","Bahria Town","Dahranwala","Pakistan"),
+(8,"158F","ShahKhawarTown","Arafwala","Pakistan"),
+(6,"02E","RiazAvenue","Islamabad","Pakistan");
+select * from nurse_address;
+
+insert into doctor
+values(1,"Rizwan",'1987-01-20','2020-01-13',310445456951,36,'12:00:00',2000),
+(2,"Ardhad Nazir",'1979-03-28','2021-07-13',357645463466,44,'18:30:00',4000),
+(3,"Ishfaq Tahir",'2004-11-03','2018-12-29',310535344552,19,'14:45:00',6000),
+(4,"Ghulam Sarwar",'2001-08-08','2015-07-28',310490050973,56,'13:15:00',1000),
+(5,"Murtaza Rasool",'1991-03-29','2022-05-05',310443555354,34,'19:30:00',3000),
+(6,"Abu zar",'1999-12-14','2023-01-09',310435352616,29,'17:00:00',8000),
+(7,"Mustafa",'2000-02-28','2007-07-05',315534526664,61,'09:15:00',9000),
+(8,"Mateen",'1985-06-29','2003-05-23',353456346466,32,'16:45:00',12000),
+(9,"Shafiq",'1987-07-19','2010-09-08',323534634646,58,'01:15:00',2000),
+(10,"Ali Raza",'2001-03-05','2008-10-29',313534666077,36,'14:30:00',5000);
+select * from doctor;
+
+insert into doctor_phone
+values(10,0304876786),
+(1,03065764784),
+(1,03157566588),
+(3,03435647070),
+(4,03226457747),
+(5,03262677457),
+(6,03093464575),
+(4,03003456545),
+(8,03018534764),
+(9,03246470860),
+(2,03440658656),
+(10,03085705686),
+(8,03244475688),
+(7,03823959475),
+(3,03462695242);
+select * from doctor_phone;
+
+insert into doctor_email
+values(1,"mustafa@gmail.com"),
+(4,"mateen@gmail.com"),
+(7,"shaiq@gmail.com"),
+(2,"aliraza@gmail.com"),
+(8,"abuzar@gmail.com"),
+(1,"khalid@gmail.com"),
+(3,"zaher@gmail.com"),
+(8,"hamza@gmail.com"),
+(1,"arshadnazir@gmail.com"),
+(5,"ghulamsarwar@gmail.com"),
+(10,"faizulhassan@gmail.com"),
+(9,"karimhussain@gmail.com"),
+(6,"mobeentahair@gmail.com"),
+(9,"rizwanahmad@gmail.com");
+select * from doctor_email;
+
+insert into doctor_address
+values(1,"12E","Bahria Town","Lahore","Pakistan"),
+(2,"12s","Defence","Mianwali","Pakistan"),
+(4,"12E","PakistanCity","FortAbbas","Pakistan"),
+(5,"13E3","AlbertTown","Rawalpindi","Pakistan"),
+(9,"13","AnmolCity","Chistian","Pakistan"),
+(3,"13Paradise","KalaShaKaku","Lahore","Pakistan"),
+(7,"09","GreenTown","Sialkot","Pakistan"),
+(10,"54C","Bahria Town","Patokie","Pakistan"),
+(8,"158F","ShahKhawarTown","Ukara","Pakistan"),
+(6,"02E","RiazAvenue","Peshawar","Pakistan");
+select * from doctor_address;
+
+insert into patient
+values(1,"AliRaza",3120567832091,'2022-05-27','2023-12-10','2002-10-04',21,3,1,3,4),
+(2,"Mushtaq",3309593759753,'2017-10-16','2019-07-14','1957-11-25',51,1,6,5,3),
+(3,"Habeeb",3129275973953,'2019-05-02','2020-02-21','1980-04-07',30,3,1,2,6),
+(4,"Fatima",3120568583757,'2020-03-15','2021-04-19','1998-05-28',29,2,6,7,7),
+(5,"Munawar",3120562090401,'2022-06-24','2023-08-06','2018-09-29',05,3,2,5,9),
+(6,"Jahangir",3249257957953,'2022-08-04','2023-10-21','1991-01-04',37,4,4,8,3),
+(7,"Jahanzaib",3129579235793,'2022-05-06','2023-02-11','1972-12-07',42,7,4,2,6),
+(8,"Mohid",3219949797755,'2015-04-10','2017-05-03','1946-08-12',71,8,10,1,1),
+(9,"Fakhr",3520593939347,'2022-11-17','2022-08-07','1943-03-14',69,9,9,5,3),
+(10,"Saam",3125839597490,'2016-09-27','2018-04-26','1945-07-03',51,10,2,3,4),
+(11,"AbdulSaboor",3129579357757,'2021-02-28','2023-06-10','1972-09-30',65,2,5,9,10),
+(12,"Iftikhar",3192579359737,'2020-07-06','2021-01-07','1985-01-04',43,6,7,10,3),
+(13,"Razia",3244294937970,'2019-09-19','2023-08-03','1987-12-15',36,4,4,1,7),
+(14,"Minahil",3693593793757,'2020-11-17','2022-03-29','1999-11-19',29,7,8,7,4),
+(15,"Haris",3835923759070,'2022-05-20','2023-09-14','1989-05-17',34,6,2,8,8),
+(16,"AbuHuraira",3110493297595,'2018-09-07','2023-07-01','1961-02-27',85,8,8,1,5),
+(17,"Taha",3135993757595,'2021-07-29','2023-05-16','1945-08-04',62,1,3,4,1),
+(18,"Ayesha",3357755934005,'2021-04-04','2023-04-25','1971-10-08',53,9,6,3,9);
+select * from patient;
+
+insert into patient_phone
+values(10,0304876786),
+(1,03025756768),
+(1,03105646666),
+(3,03456454765),
+(4,03225475687),
+(5,03262677457),
+(6,03007567676),
+(4,03058850700),
+(15,03014665827),
+(9,03064576754),
+(2,03246456457),
+(10,03756856886),
+(8,03244475688),
+(11,03457675668),
+(3,03245466457),
+(10,0307457558),
+(17,03096756856),
+(1,03157839876),
+(13,03215756765),
+(4,03575775786),
+(15,03685567066),
+(6,03234644574),
+(14,03046574756),
+(8,03015684756),
+(9,03547657873),
+(2,03447575478),
+(15,03757574776),
+(18,03244556760),
+(16,03567477587),
+(3,03466457854);
+select * from patient_phone;
+
+insert into patient_email
+values(1,"aliraza@gmail.com"),
+(2,"mushtaq@gmail.com"),
+(3,"habeeb@gmail.com"),
+(4,"fatima@gmail.com"),
+(5,"munawar@gmail.com"),
+(6,"janahangir@gmail.com"),
+(7,"jahanzaib@gmail.com"),
+(8,"mohid@gmail.com"),
+(9,"fakhr@gmail.com"),
+(10,"saam@gmail.com"),
+(11,"abdulsboor@gmail.com"),
+(12,"iftikhar@gmail.com"),
+(13,"razia@gmail.com"),
+(14,"minahil@gmail.com"),
+(15,"haris@gmail.com"),
+(16,"abuhurairah@gmail.com"),
+(17,"taha@gmail.com"),
+(18,"ayesha@gmail.com");
+select * from patient_email;
+
+insert into patient_address
+values(1,"12E","Bahria Town","Lahore","Pakistan"),
+(2,"12s","Defence","Mianwali","Pakistan"),
+(3,"12E","PakistanCity","FortAbbas","Pakistan"),
+(4,"13E3","AlbertTown","Rawalpindi","Pakistan"),
+(5,"13","AnmolCity","Chistian","Pakistan"),
+(6,"13Paradise","KalaShaKaku","Lahore","Pakistan"),
+(7,"09","GreenTown","Sialkot","Pakistan"),
+(8,"54C","Bahria Town","Patokie","Pakistan"),
+(9,"158F","ShahKhawarTown","Ukara","Pakistan"),
+(10,"02E","RiazAvenue","Peshawar","Pakistan"),
+(11,"12E","Bahria Town","Lahore","Pakistan"),
+(12,"12s","Defence","Peshawar","Pakistan"),
+(13,"12E","PakistanCity","FortAbbas","Pakistan"),
+(14,"13E3","AlbertTown","Rawalpindi","Pakistan"),
+(15,"13","AnmolCity","Chistian","Pakistan"),
+(16,"13Paradise","KalaShaKaku","Lahore","Pakistan"),
+(17,"12E","BahriaTown","Lahore","Pakistan"),
+(18,"12s","Defence","Sargoda","Pakistan");
+select * from patient_address;
+
+insert into bill
+values(1,1,3,34000,1500),
+(2,2,1,17000,1500),
+(3,3,9,15000,1500),
+(4,4,5,1200,1500),
+(5,5,6,10000,2000),
+(6,6,8,30000,1500),
+(7,7,10,12000,1500),
+(8,8,11,14000,1500),
+(9,9,5,7000,1500),
+(10,10,3,12000,4000),
+(11,11,8,1600,15000),
+(12,12,9,4500,30000),
+(13,13,3,3600,13000),
+(14,14,1,5000,15000),
+(15,15,9,2000,17000),
+(16,16,3,1500,9000),
+(17,17,6,12000,4000),
+(18,18,8,10000,23000);
+select * from bill;
+
+insert into bill_medicinecharges
+values(1,1,223,1500),
+(2,2,15,1000),
+(3,3,500,2000),
+(4,4,98,1500),
+(5,5,675,4000),
+(6,5,675,3500),
+(7,6,55,1500),
+(8,7,50,1550),
+(9,8,100,1150),
+(10,9,315,15000),
+(11,10,20,1200),
+(12,11,25,3000),
+(13,2,15,6000),
+(14,6,55,1500),
+(15,7,50,7000),
+(16,8,100,700),
+(17,10,20,1500),
+(18,4,98,1600);
+select * from bill_medicinecharges;
+
+insert into transection
+values(1,1,1,"7567992929293",'2021-05-07',"Cash"),
+(2,2,2,"757493080939767",'2005-05-07',"Cash"),
+(3,3,9,"097656564534224",'2015-05-07',"Card"),
+(4,4,10,"6740584544333",'2023-05-07',"Cash"),
+(5,5,5,"6280869864553",'2001-05-07',"Card"),
+(6,6,6,"245T757867667",'2021-05-07',"Card"),
+(7,7,3,"7567089232335",'2007-05-07',"Card"),
+(8,8,8,"8978976078970",'2015-05-07',"Card"),
+(9,9,5,"9812645665888",'2016-05-07',"Cash"),
+(10,10,7,"9789607976537",'2019-05-07',"Cash"),
+(11,11,9,"7896715656746",'2012-05-07',"Card"),
+(12,12,2,"6756456465544",'2023-05-07',"Cash"),
+(13,13,6,"5640124554566",'2001-05-07',"Cash"),
+(14,14,3,"7576634897857",'2022-05-07',"Cash"),
+(15,15,10,"9675787506756",'2023-05-07',"Cash"),
+(16,16,11,"7566454364555",'2010-05-07',"Cash"),
+(17,17,5,"7656453784456",'2014-05-07',"Card"),
+(18,18,8,"5630986857655",'2017-05-07',"Cash");
+select * from transection;

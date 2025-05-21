@@ -1,0 +1,478 @@
+	create database Hospital;
+
+create table Medicine(
+Medicine_ID int not null primary key,
+M_Name varchar(15) not null,
+M_Price int not null unique,
+Manufacture_Date date not null,
+Expiry_Date date not null,
+M_type varchar(10) not null
+);
+
+create table Accountant(
+Accountant_ID int not null primary key,
+A_Name char(15) not null,
+CNIC double not null unique,
+Salary int not null,
+Age int 
+);
+
+create table Accountant_Phone(
+A_ID int not null,
+constraint foreign key (A_ID) references Accountant(Accountant_ID),
+Phone double 
+);
+
+create table Accountant_Email(
+A_ID int not null,
+constraint foreign key (A_ID) references Accountant(Accountant_ID),
+Email varchar(25) not null
+);
+
+create table Accountant_Address(
+A_ID int not null,
+constraint foreign key (A_ID) references Accountant(Accountant_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Receiptnist(
+Receiptnist_ID int not null primary key,
+R_Name char(15) not null,
+CNIC double not null unique,
+Salary int not null,
+Age int 
+);
+
+create table Receiptnist_Phone(
+R_ID int not null,
+constraint foreign key (R_ID) references Receiptnist(Receiptnist_ID),
+Phone double 
+);
+
+create table Receiptnist_Email(
+R_ID int not null,
+constraint foreign key (R_ID) references Receiptnist(Receiptnist_ID),
+Email varchar(25) not null
+);
+
+create table Receiptnist_Address(
+R_ID int not null,
+constraint foreign key (R_ID) references Receiptnist(Receiptnist_ID),
+House_No varchar(10) not null,
+Town varchar(14) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Ward(
+Ward_No int not null primary key,
+No_Of_Beds int not null,
+W_Location varchar(25)
+);
+
+create table Bed(
+Bed_No int not null Primary key,
+B_Type varchar(10) not null,
+Buying_Date date not null,
+W_No int not null,
+constraint foreign key (W_No) references Ward(Ward_No)
+); 
+
+create table Nurse(
+Nurse_ID int not null primary key,
+N_Name char(15) not null,
+CNIC double not null unique,
+Salary int not null,
+Age int ,
+W_no int not null,
+constraint foreign key (W_no) references Ward(Ward_No)
+);
+
+create table Nurse_Phone(
+N_ID int not null,
+constraint foreign key (N_ID) references Nurse(Nurse_ID),
+Phone double 
+);
+
+create table Nurse_Email(
+N_ID int not null,
+constraint foreign key (N_ID) references Nurse(Nurse_ID),
+Email varchar(25) not null
+);
+
+create table Nurse_Address(
+N_ID int not null,
+constraint foreign key (N_ID) references Nurse(Nurse_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Doctor(
+Doctor_ID int not null primary key,
+D_Nmae char(15) not null,
+DOB date not null,
+Joining_Date date not null,
+CNIC double not null unique,
+Age int,
+Timing time not null,
+Fee int 
+);
+
+create table Doctor_Phone(
+D_ID int not null,
+constraint foreign key (D_ID) references Doctor(Doctor_ID),
+Phone double 
+);
+
+create table Doctor_Email(
+D_ID int not null,
+constraint foreign key (D_ID) references Doctor(Doctor_ID),
+Email varchar(25) not null
+);
+
+create table Doctor_Address(
+D_ID int not null,
+constraint foreign key (D_ID) references Doctor(Doctor_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Patient(
+Patient_ID int not null primary key,
+P_Name varchar(15) not null,
+CNIC double not null unique,
+Admit_Date date not null,
+Discharge_Date date not null,
+DOB date not null,
+Age int not null, 
+D_id int not null,
+constraint foreign key (D_id) references Doctor(Doctor_ID),
+N_id int not null,
+constraint foreign key (N_id) references Nurse(Nurse_ID),
+W_no int not null,
+constraint foreign key (W_no) references Ward(Ward_No),
+B_id int not null,
+constraint foreign key (B_id) references Bed(Bed_No)
+);
+
+create table Patient_Phone(
+P_ID int not null,
+constraint foreign key (P_ID) references Patient(Patient_ID),
+Phone double 
+);
+
+create table Patient_Email(
+P_ID int not null,
+constraint foreign key (P_ID) references Patient(Patient_ID),
+Email varchar(25) not null
+);
+
+create table Patient_Address(
+P_ID int not null,
+constraint foreign key (P_ID) references Patient(Patient_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Bill(
+Bill_ID int not null primary key,
+P_id int not null,
+constraint foreign key (P_id) references Patient(Patient_ID),
+R_id int not null,
+constraint foreign key (R_id) references Receiptnist(Receiptnist_ID),
+Rental_Charges int,
+Test_Charges int
+);
+
+create table Bill_MedicineCharges(
+B_id int not null,
+constraint foreign key (B_id) references Bill(Bill_ID),
+M_id int not null,
+constraint foreign key (M_id) references Medicine(Medicine_ID),
+M_price int not null,
+constraint foreign key (M_price) references Medicine(M_Price),
+G_Total int not null
+);
+
+create table Transection(
+Transection_ID int not null,
+B_id int not null,
+constraint foreign key (B_id) references Bill(Bill_ID),
+A_id int not null,
+constraint foreign key (A_id) references Accountant(Accountant_ID),
+T_Account varchar(25) not null,
+Trans_Date date not null,
+Payment_Method Varchar(15) not null
+);
+
+create database Hospital;
+
+create table Medicine(
+Medicine_ID int not null primary key,
+M_Name varchar(15) not null,
+M_Price int not null unique,
+Manufacture_Date date not null,
+Expiry_Date date not null,
+M_type varchar(10) not null
+);
+
+create table Accountant(
+Accountant_ID int not null primary key,
+A_Name char(15) not null,
+CNIC double not null unique,
+Salary int not null,
+Age int 
+);
+
+create table Accountant_Phone(
+A_ID int not null,
+constraint foreign key (A_ID) references Accountant(Accountant_ID),
+Phone double 
+);
+
+create table Accountant_Email(
+A_ID int not null,
+constraint foreign key (A_ID) references Accountant(Accountant_ID),
+Email varchar(25) not null
+);
+
+create table Accountant_Address(
+A_ID int not null,
+constraint foreign key (A_ID) references Accountant(Accountant_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Receiptnist(
+Receiptnist_ID int not null primary key,
+R_Name char(15) not null,
+CNIC double not null unique,
+Salary int not null,
+Age int 
+);
+
+create table Receiptnist_Phone(
+R_ID int not null,
+constraint foreign key (R_ID) references Receiptnist(Receiptnist_ID),
+Phone double 
+);
+
+create table Receiptnist_Email(
+R_ID int not null,
+constraint foreign key (R_ID) references Receiptnist(Receiptnist_ID),
+Email varchar(25) not null
+);
+
+create table Receiptnist_Address(
+R_ID int not null,
+constraint foreign key (R_ID) references Receiptnist(Receiptnist_ID),
+House_No varchar(10) not null,
+Town varchar(14) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Ward(
+Ward_No int not null primary key,
+No_Of_Beds int not null,
+W_Location varchar(25)
+);
+
+create table Bed(
+Bed_No int not null Primary key,
+B_Type varchar(10) not null,
+Buying_Date date not null,
+W_No int not null,
+constraint foreign key (W_No) references Ward(Ward_No)
+); 
+
+create table Nurse(
+Nurse_ID int not null primary key,
+N_Name char(15) not null,
+CNIC double not null unique,
+Salary int not null,
+Age int ,
+W_no int not null,
+constraint foreign key (W_no) references Ward(Ward_No)
+);
+
+create table Nurse_Phone(
+N_ID int not null,
+constraint foreign key (N_ID) references Nurse(Nurse_ID),
+Phone double 
+);
+
+create table Nurse_Email(
+N_ID int not null,
+constraint foreign key (N_ID) references Nurse(Nurse_ID),
+Email varchar(25) not null
+);
+
+create table Nurse_Address(
+N_ID int not null,
+constraint foreign key (N_ID) references Nurse(Nurse_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Doctor(
+Doctor_ID int not null primary key,
+D_Nmae char(15) not null,
+DOB date not null,
+Joining_Date date not null,
+CNIC double not null unique,
+Age int,
+Timing time not null,
+Fee int 
+);
+
+create table Doctor_Phone(
+D_ID int not null,
+constraint foreign key (D_ID) references Doctor(Doctor_ID),
+Phone double 
+);
+
+create table Doctor_Email(
+D_ID int not null,
+constraint foreign key (D_ID) references Doctor(Doctor_ID),
+Email varchar(25) not null
+);
+
+create table Doctor_Address(
+D_ID int not null,
+constraint foreign key (D_ID) references Doctor(Doctor_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Patient(
+Patient_ID int not null primary key,
+P_Name varchar(15) not null,
+CNIC double not null unique,
+Admit_Date date not null,
+Discharge_Date date not null,
+DOB date not null,
+Age int not null, 
+D_id int not null,
+constraint foreign key (D_id) references Doctor(Doctor_ID),
+N_id int not null,
+constraint foreign key (N_id) references Nurse(Nurse_ID),
+W_no int not null,
+constraint foreign key (W_no) references Ward(Ward_No),
+B_id int not null,
+constraint foreign key (B_id) references Bed(Bed_No)
+);
+
+create table Patient_Phone(
+P_ID int not null,
+constraint foreign key (P_ID) references Patient(Patient_ID),
+Phone double 
+);
+
+create table Patient_Email(
+P_ID int not null,
+constraint foreign key (P_ID) references Patient(Patient_ID),
+Email varchar(25) not null
+);
+
+create table Patient_Address(
+P_ID int not null,
+constraint foreign key (P_ID) references Patient(Patient_ID),
+House_No varchar(10) not null,
+Town varchar(15) not null,
+City varchar(15) not null,
+Country varchar(10) not null
+);
+
+create table Bill(
+Bill_ID int not null primary key,
+P_id int not null,
+constraint foreign key (P_id) references Patient(Patient_ID),
+R_id int not null,
+constraint foreign key (R_id) references Receiptnist(Receiptnist_ID),
+Rental_Charges int,
+Test_Charges int
+);
+
+create table Bill_MedicineCharges(
+B_id int not null,
+constraint foreign key (B_id) references Bill(Bill_ID),
+M_id int not null,
+constraint foreign key (M_id) references Medicine(Medicine_ID),
+M_price int not null,
+constraint foreign key (M_price) references Medicine(M_Price),
+G_Total int not null
+);
+
+create table Transection(
+Transection_ID int not null,
+B_id int not null,
+constraint foreign key (B_id) references Bill(Bill_ID),
+A_id int not null,
+constraint foreign key (A_id) references Accountant(Accountant_ID),
+T_Account varchar(25) not null,
+Trans_Date date not null,
+Payment_Method Varchar(15) not null
+);
+
+Truncate table Transection;
+Truncate table Bill_MedicineCharges;
+Truncate table Patient_Address;
+Truncate table Patient_Email;
+Truncate table Patient_Phone;
+Truncate table Doctor_Address;
+Truncate table Doctor_Email;
+Truncate table Doctor_Phone;
+Truncate table Nurse_Address;
+Truncate table Nurse_Email;
+Truncate table Nurse_Phone;
+Truncate table Receiptnist_address;
+Truncate table Receiptnist_email;
+Truncate table Receiptnist_phone;
+Truncate table Accountant_address;
+Truncate table Accountant_email;
+Truncate table Accountant_Phone;
+
+drop table Transection;
+drop table Bill_MedicineCharges;
+drop table Bill;
+drop table Patient_Address;
+drop table Patient_Email;
+drop table Patient_Phone;
+drop table Patient;
+drop table Doctor_Address;
+drop table Doctor_Email;
+drop table Doctor_Phone;
+drop table Doctor;
+drop table Nurse_Address;
+drop table Nurse_Email;
+drop table Nurse_Phone;
+drop table Nurse;
+drop table Bed;
+drop table Ward;
+drop table Receiptnist_address;
+drop table Receiptnist_email;
+drop table Receiptnist_phone;
+drop table Receiptnist;
+drop table Accountant_address;
+drop table Accountant_email;
+drop table Accountant_Phone;
+drop table Accountant;
+drop table Medicine;
+
+Drop database hospital;
